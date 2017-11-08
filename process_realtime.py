@@ -44,8 +44,8 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
     for (x,y,w,h) in faces:
         cv2.rectangle(image,(x,y),(x+w,y+h),(255,255,255),2)
         roi_gray = image[y:y+h, x:x+w]
-        if i<200:
-            cv2.imwrite('./stazia/img%s.jpg' % i, roi_gray)
+        if i<400:
+            cv2.imwrite('./umut/img%s.jpg' % i, roi_gray)
             i=i+1
             print i
     #height, width=image.shape
